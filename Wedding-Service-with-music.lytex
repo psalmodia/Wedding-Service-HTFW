@@ -273,7 +273,8 @@
   \override Staff.TimeSignature #'stencil = ##f
   \key f \major
   \time 4/4
-  c4.( d8) d2\fermata | 
+  %c4.( d8) d2\fermata |  % Ni-Pa Amen
+  d2 d2\fermata |  % Simple Amen
   f4 e d( e) | f8( a g4) f4( e8 d) | \time 2/4 d4 r8 d8 | \time 4/4 a'4(g) f g | f8( g f e d e d4) | d2 r4
   d4 | g4( a) a8( bes a g) | g8( a f4) g8( a g4) | a2 r4 g4 | a4( g f g) | f8( g f e) d8( e d4) | \time 2/4 d2 |
   \time 4/4 g8( f g a) f8( e f g) | f8( g f e) d8( e d4) | \time 2/4 d2 \bar "||"
