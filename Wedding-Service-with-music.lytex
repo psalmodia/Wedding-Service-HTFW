@@ -154,7 +154,7 @@
 \newcommand{\AWYSGospelAlleluia}{\begin[staffsize=25]{lilypond}
 \layout {
   indent = #0
-  %line-width = #120
+  line-width = #170
   ragged-last = ##t
 }
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
@@ -164,8 +164,8 @@
   \key f \major
   \time 4/4
   \partial 4 f4
-  f4 f g f | f4 f f f | f4 f f f | e4 d f f\fermata |
-}\addlyrics{And with your spi -- rit. Al -- le -- lu -- ia. Al -- le -- lu -- ia. Al -- le -- lu -- ia.}
+  f4 f g f | f4 f \tuplet 3/2 {f4 f f} | f4 f \tuplet 3/2 {f4 f f} | e4 d \tuplet 3/2 {f4 f f}\fermata |
+}\addlyrics{And with your spi -- rit. Al -- le -- lu -- i -- a. Al -- le -- lu -- i -- a. Al -- le -- lu -- i -- a.}
 \end{lilypond}}
 
 \newcommand{\AWYSGospel}{\begin[staffsize=25]{lilypond}
