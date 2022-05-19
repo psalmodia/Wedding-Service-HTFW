@@ -1,0 +1,1020 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{palatino}
+\usepackage{color}
+\usepackage{pdfpages}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek, english]{babel}
+\usepackage[LGR,T1]{fontenc}
+
+\textwidth=6.5truein
+\textheight=9.5truein
+\topmargin=-0.8truein
+\oddsidemargin=0truein
+\evensidemargin=0truein
+\parindent=0em
+\parskip=1em
+
+\newcommand{\Amen}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  g2
+  \time 4/4
+  g1
+}\addlyrics{A- men}
+\end{lilypond}}
+
+\newcommand{\LHMone}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g4 g a2 | g1
+}\addlyrics{Lord, have mer- cy}
+\end{lilypond}}
+
+\newcommand{\LHMtwo}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g2( a4) b
+  \time 6/4
+  c4( a) g1
+}\addlyrics{Lord, have mer- cy}
+\end{lilypond}}
+
+\newcommand{\LHMthree}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g4( f e) a
+  \time 6/4
+  g4( f) e1
+}\addlyrics{Lord, have mer- cy}
+\end{lilypond}}
+
+\newcommand{\TYOL}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  a2
+  \time 4/4
+  g2 f | e1
+}\addlyrics{To You, O Lord}
+\end{lilypond}}
+
+\newcommand{\AWYS}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  line-width = #120
+  ragged-last = ##t
+}
+\relative g' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g2 fis4 g
+  \time 6/4
+  a2 g1
+}\addlyrics{And with your spi -- rit.}
+\end{lilypond}}
+
+\newcommand{\GloryToYou}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  line-width = #120
+  ragged-last = ##t
+}
+\relative g' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 f4 g | e f g2 | bes2 a4 g |
+  \time 2/4 f2\fermata
+}\addlyrics{Glo -- ry to You, our God. Glo -- ry to You.}
+\end{lilypond}}
+
+\newcommand{\GloryToYouFinal}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+\relative g' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 f4 g | e f g2 | bes2 a4 g |
+  g2.( f4 e2 d4 e f1)
+}\addlyrics{Glo -- ry to You, our God. Glo -- ry to You.}
+\end{lilypond}}
+
+\newcommand{\CrowningHymn}{\begin[staffsize=25]{lilypond}
+  %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(2)" } }
+  \relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \repeat volta 2 {
+  \time 4/4
+  f2 e4( f) |
+  \time 2/4
+  g4 r |
+  \time 4/4
+  bes2 a4 g | f4( e) d c | d8( e f4) f2
+  }
+}\addlyrics{
+  Lord our | God | crown them with | glo -- ry and | hon -- or
+}
+\end{lilypond}}
+
+\newcommand{\CrowningHymnThird}{\begin[staffsize=25]{lilypond}
+  \relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+   bes2 a4( g) |
+  \time 2/4
+  g4 r |
+  \time 4/4
+  c4( bes) a g | f8( g f e) d4 c | d4( e f8 g a4) | g2.( f4 e4 r dis e f1)
+}\addlyrics{
+  Lord our | God | crown them with | glo -- ry and | hon -- or
+}
+\end{lilypond}}
+
+\newcommand{\AWYSGospelAlleluia}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  \partial 4 f4
+  f4 f g f | f4 f f f | f4 f f f | e4 d f f\fermata |
+}\addlyrics{And with your spi -- rit. Al -- le -- lu -- ia. Al -- le -- lu -- ia. Al -- le -- lu -- ia.}
+\end{lilypond}}
+
+\newcommand{\AWYSGospel}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 e4 f | g2 f
+}\addlyrics{And with your spi -- rit.}
+\end{lilypond}}
+
+\newcommand{\GloryBeforeGospel}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 f4 f | f4 f f2 | g2 g4 g | f1
+}\addlyrics{Glo -- ry to You, O Lord, glo -- ry to You. }
+\end{lilypond}}
+
+\newcommand{\GloryAfterGospel}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 f4 f | \time 5/4 f2 c4 c2 | \time 4/4 a'2 g4 g | f2. r4
+}\addlyrics{Glo -- ry to You, O Lord, glo -- ry to You. __}
+\end{lilypond}}
+
+\newcommand{\LHMthreefold}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+\relative g' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  e4 e f8( g) g4 | a4 a8( g) b8( a) g4 | a4 g f e\fermata 
+}\addlyrics{Lord have mer -- cy. Lord have mer -- cy. Lord have mer -- cy.}
+\end{lilypond}}
+
+\newcommand{\GTOLone}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g2 a4 a | g1
+}\addlyrics{Grant this, O Lord}
+\end{lilypond}}
+
+\newcommand{\GTOLtwo}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g2( a4 b)
+  \time 6/4
+  c4 a g1
+}\addlyrics{Grant this, O Lord}
+\end{lilypond}}
+
+\newcommand{\GTOLthree}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g4( f e a)
+  \time 6/4
+  g4 f e1
+}\addlyrics{Grant this, O Lord}
+\end{lilypond}}
+
+\newcommand{\TakeUpTheCup}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  c4.( d8) d2\fermata | 
+  f4 e d( f) | f8( a g4) f4( e8 d) | \time 2/4 d4 r8 d8 | \time 4/4 a'4(g) f g | f8( g f e d e d4) | d2 r4
+  d4 | g4( a) a8( bes a g) | g8( a f4) g8( a g4) | a2 r4 g4 | a4( g f g) | f8( g f e) d8( e d4) | \time 2/4 d2 |
+  \time 4/4 g8( f g a) f8( e f g) | f8( g f e) d8( e d4) | \time 2/4 d2 \bar "||"
+}\addlyrics{
+  A -- men.
+  I will take up the cup, the cup of sal -- va -- tion,
+  and call up -- on the name, the name of the Lord.
+  Al -- le -- lu -- i -- a.
+}
+\end{lilypond}}
+
+\newcommand{\OIsaiah}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  a4 g a b | d8( c) b4 c r | \time 6/4 c4 c b8( c d4) a2 | \time 4/4 a8( b) c4 b8( a) g4 | a2 r4 a4 |
+  e'4 d c b | c4( d) c b | a4 b c c| b4( a) b b | c4 b a g| fis4 g a r |
+  d4 c b8( a) g4 | \time 2/4 a4 r | \time 4/4 c2 b4 c | d4 d a r | \time 2/4 a4 a | \time 4/4 b4 g a b |
+  d4( c) b8( c b a) | a1 \bar "||"
+}\addlyrics{
+  O I -- sai -- ah, dance with joy, for the Vir -- gin in the womb con -- ceived, and she
+  has giv -- en birth to a son, di -- vine and hu -- man, Em -- man -- u -- el, to whom the name
+  Or -- i -- ent be -- longs. Him do we mag -- ni -- fy, and the Vir -- gin we be -- a -- ti -- fy.
+}
+\end{lilypond}}
+
+\newcommand{\OHolyMartyrSaints}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 f4 e | f4 g g r | g4 a c bes | a4( g) f e | d4 e e8( d) c4 | d8( e f4) f4 r |
+  \time 2/4 f4 f | \time 4/4 bes2 a4 g | a4 f g2 | \time 2/4 g4 g | \time 4/4 a4 f g g| a4( g) f4( e) |
+  f1 \bar "||"
+}\addlyrics{
+  O ho -- ly Mar -- tyr Saints, who com -- pet -- ed well and re -- ceived the crowns of
+  laur -- el, in -- ter -- cede with the Lord for us, that His mer -- cy come up -- on our
+  souls.
+}
+\end{lilypond}}
+
+\newcommand{\GloryBeToYou}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative f' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  bes4 bes a g | g4( a) a8( g) f4 | g4 r g a | c4 bes a g | f4 r f f | bes4 bes a g | a8( g) f4 g r8 g8 |
+  \time 2/4 a4 bes | \time 6/4 c4( d8 c) bes4( a) g4 g | \time 4/4 a8( g) f4 g g | a4( g) f( e) | f1 \bar "||"
+}\addlyrics{
+  Glo -- ry be to You, Christ our God, the A -- pos -- tles' pride and joy, ex -- ul -- ta -- tion
+  of the Mar -- tyr Saints, whose pro -- cla -- ma -- tion was the co -- es -- sen -- tial Trin -- i -- ty.
+}
+\end{lilypond}}
+
+
+\begin{document}
+\Large
+
+\begin{center}
+\LARGE
+\textbf{\textsc{The Service of}} \\
+\textbf{\textsc{Holy Matrimony}}
+
+%\includegraphics{media/image1.jpeg}
+
+\textbf{\textsc{Holy Trinity Greek Orthodox Church}} \\
+\textbf{\textsc{Fort Wayne}}
+\end{center}
+
+\begin{center}\textbf{\textsc{The Service of Betrothal}}\end{center}
+  
+\textbf{PRIEST:} Blessed is our God always, now and ever, and to the
+ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} In peace, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} For the peace from above and for the salvation of our
+souls, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} For the peace of the whole world, for the stability of
+the holy churches of God, and for the unity of all, let us pray to the
+Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} For this holy house and for those who enter it with
+faith, reverence, and the fear of God, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} For our Archbishop (Name), for the honorable
+presbyterate, for the diaconate in Christ, and for all the clergy and
+the people, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} For the servant of God (Groom) and the servant of God
+(Bride) who now pledge themselves to one another, and for their
+salvation; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} That He send down upon them love perfect and peaceful,
+and give them His protection; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\clearpage
+\textbf{PRIEST:} That He may keep them in oneness of mind, and in
+steadfastness of the Faith; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} That He may keep the course and manner of their life
+blameless; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} That the Lord God may grant unto them an honorable
+marriage and a bed undefiled; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} For our deliverance from all affliction, wrath, danger,
+and necessity, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} Help us, save us, have mercy on us, and protect us, O
+God, by Your grace.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} Commemorating our most holy, pure, blessed, and
+glorious Lady, the Theotokos and ever-virgin Mary, with all the saints,
+let us commend ourselves and one another and our whole life to Christ
+our God.
+
+\textbf{PEOPLE:} \TYOL
+
+\textbf{PRIEST:} For to You belong all glory, honor, and worship, to the
+Father and to the Son and to the Holy Spirit, now and forever and to the
+ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} O God eternal, Who has brought together into unity the
+things which before had been separate, and in so doing impose on them an
+indissoluble bond of love, Who did bless Isaac and Rebecca, declaring
+them to be the inheritors of Your promise: do You Yourself bless these
+Your servants (Groom) and (Bride), directing them into every good work.
+For You are a merciful and loving God, and to You do we send up all
+Glory: to the Father, and to the Son, and to the Holy Spirit, both now
+and ever, and to the ages of ages.
+
+\textbf{PEOPLE}: \Amen
+
+\textbf{PRIEST:} Peace be with all.
+
+\textbf{PEOPLE:} \AWYS
+
+\textbf{PRIEST:} Let us bow our heads to the Lord.
+
+\textbf{PEOPLE:} \TYOL
+
+\textbf{PRIEST:} O Lord our God, Who espoused the Church as a pure
+virgin called from out of the Gentiles, bless this Betrothal, uniting
+these Your servants, keeping them in peace and oneness of mind. For to
+You are due all glory, honor, and worship: to the Father, and to the
+Son, and to the Holy Spirit, both now and ever, and to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} The servant of God (Groom) is betrothed to the servant
+of God (Bride), in the Name of the Father, and of the Son, and of the
+Holy Spirit. (3)
+
+\textbf{PEOPLE:} \Amen (3)
+
+\textbf{PRIEST:} The servant of God (Bride) is betrothed to the servant
+of God (Groom), in the Name of the Father, and of the Son, and of the
+Holy Spirit. (3)
+
+\textbf{PEOPLE:} \Amen (3)
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} O Lord our God, Who accompanied the servant of the
+patriarch Abraham to Mesopotamia, when he was sent to espouse a wife for
+his lord Isaac, and did reveal to him a sign by the drawing of water to
+betroth Rebecca; do You Yourself bless the betrothal of these Your
+servants (Groom) and (Bride) and confirm the word that has been spoken
+by them; for You, O Lord, from the beginning have created male and
+female, and by You is a woman joined to a man for assistance and for the
+continuation of the human race. Therefore, O Lord God, Who have sent
+forth Your truth to Your inheritance and Your promise to Your servants,
+our fathers, who were Your elect, do You give regard unto this Your
+servant (Groom) and Your servant (Bride), and seal their betrothal in
+faith, in oneness of mind, in truth and in love. For You, O Lord, have
+declared that a pledge is to be given and held inviolate in all things.
+By a ring Joseph was given might in Egypt; by a ring Daniel was exalted
+in Babylon; by a ring the truth of Thamar was made manifest; by a ring
+our heavenly Father showed compassion upon His prodigal son, for He
+said, "Put a ring upon his right hand, kill the fatted calf, and let us
+eat and rejoice." Your own right hand, O Lord, armed Moses in the Red
+Sea. Yea, by the word of Your truth were the Heavens established and the
+earth set upon her sure foundations; and the right hands of Your
+servants shall be blessed by Your mighty word, and by Your uplifted arm.
+Wherefore, O Sovereign Lord, do You Yourself bless this putting on of
+rings with Your heavenly benediction; and may Your Angel go before them
+all the days of their life. For You are He that blesses and sanctifies
+all things, and to You do we send up Glory: to the Father, and to the
+Son, and to the Holy Spirit, both now and ever, and to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\clearpage
+\begin{center}\textbf{\textsc{The Service of Holy Matrimony}}\end{center}
+
+\textbf{PRIEST:} Blessed are all who fear the Lord, who walk in His
+ways.
+
+\textbf{PRIEST:} You shall eat the fruits of your labor; you are
+blessed, and it shall be well with you.
+
+\textbf{PEOPLE:} \GloryToYou
+
+\textbf{PRIEST:} Your wife shall be like a vine, prospering on the sides
+of your house; your children like newly planted olive trees around your
+table.
+
+\textbf{PRIEST:} Behold, so shall the man be blessed who fears the Lord.
+
+\textbf{PEOPLE:} \GloryToYou
+
+\textbf{PRIEST:} May the Lord bless you from Zion, and may you see the
+good things of Jerusalem all the days of your life.
+
+\textbf{PRIEST:} May you see your children's children. Peace be upon
+Israel.
+
+\textbf{PEOPLE:} \\
+\GloryToYouFinal
+
+\textbf{PRIEST:} Blessed is the Kingdom of the Father and of the Son and
+of the Holy Spirit, now and forever and to the ages of ages.
+
+\textbf{PEOPLE}: \Amen
+
+\textbf{PRIEST:} In peace, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} For the peace from above and for the salvation of our
+souls, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} For the peace of the whole world, for the stability of
+the holy churches of God, and for the unity of all, let us pray to the
+Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} For this holy house and for those who enter it with
+faith, reverence, and the fear of God, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} For (episcopal rank) (name), for the honorable
+presbyterate, for the diaconate in Christ, and for all the clergy and
+the people, let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} For the servants of God (Groom) and (Bride), who are
+now being joined to one another in the community of Marriage, and for
+their salvation; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} That this marriage may be blessed as was that of Cana
+of Galilee; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} That there may be given unto them soberness of life,
+and fruit of the womb as may be most expedient for them; let us pray to
+the Lord.
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} That they may rejoice in the beholding of sons and
+daughters; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} That there may be granted unto them the happiness of
+abundant fertility, and a course of life blameless and unashamed; let us
+pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} That there may be granted unto them and unto us all
+prayers that tend unto salvation; let us pray to the Lord
+
+\textbf{PEOPLE:} \LHMtwo
+
+\textbf{PRIEST:} That both they and we may be delivered from
+tribulation, wrath, danger, and necessity; let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMthree
+
+\textbf{PRIEST:} Help us, save us, have mercy on us, and protect us, O
+God, by Your grace.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} Commemorating our most holy, pure, blessed, and
+glorious Lady, the Theotokos and ever-virgin Mary, with all the saints,
+let us commend ourselves and one another and our whole life to Christ
+our God.
+
+\textbf{PEOPLE:} \TYOL
+
+\textbf{PRIEST:} For to You belong all glory, honor, and worship, to the
+Father and to the Son and to the Holy Spirit, now and forever and to the
+ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} O God most pure, Author of all creation, Who through
+Your man-befriending love transformed a rib of Adam the forefather into
+a woman, and blessed them and said, "Increase and multiply, and have
+dominion over the earth," and, by the conjoining, declared them both to
+be one member, for because of this a man shall forsake his father and
+his mother, and shall cleave unto his wife, and the two shall be one
+flesh-and whom God has joined together let not man put asunder; Who did
+also bless Your servant Abraham, and opened the womb of Sara, and made
+him the father of many nations; Who bestowed Isaac upon Rebecca, and
+blessed her offspring; Who joined Jacob and Rachel, and from them made
+manifest the twelve patriarchs; Who yoked Joseph and Asenath together,
+and as the fruit of generation did bestow upon them Ephrem and Manasse;
+Who accepted Zacharias and Elizabeth, and declared their offspring the
+Forerunner; Who out of the root of Jesse, according to the flesh,
+produced the Ever-Virgin Mary, and from her were Incarnate-born for the
+salvation of the human race; Who through Your unspeakable Grace and
+plentiful goodness were present in Cana of Galilee, and blessed the
+marriage there, that You might show a lawful union, and a generation
+there from, is according to Your Will; do You Yourself, O Most Holy
+Master, accept the prayer of us, Your servants; and as You were present
+there, be present also here with Your invisible protection. Bless this
+marriage and grant unto these Your servants (Groom) and (Bride) a
+peaceful life, length of days, chastity, love for one another in a bond
+of peace, offspring long-lived, fair fame by reason of their children,
+and a crown of glory that does not fade away. Account them worthy to see
+their children's children. Keep their wedlock safe against every hostile
+scheme; give them of the dew from the Heavens above, and of the fatness
+of the earth. Fill their houses with bountiful food, and with every good
+thing, that they may have to give to them that are in need, bestowing
+also on them that are here assembled with us all their supplications
+that are unto salvation. For a God of mercy and of compassion, and of
+man-befriending love are You, and to You do we send up Glory: as to Your
+eternal Father and Your All-Holy, Good, and Life-creating Spirit, both
+now and ever, and to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} Blessed are You, O Lord our God, Holy Celebrant of
+mystical and pure marriage, Maker of the laws that govern earthly
+bodies, Guardian of incorruption, Kindly protector of the means of life:
+do You Yourself now, O Master, Who in the beginning created man, and
+appointed him as the king of creation, and said, "It is not good for man
+to be alone upon the earth; let us make a helpmate for him"; then,
+taking one of his ribs, made woman, whom when Adam saw, he said, "This
+is now bone of my bones, and flesh of my flesh, for she was taken out of
+her man. For this cause shall a man forsake his father and his mother,
+and cleave unto his wife, and two shall be one flesh," and "whom God has
+joined together, let no man put asunder." And now, O Master, Lord our
+God, send down Your heavenly Grace upon these Your servants, (Groom) and
+(Bride), and grant unto this woman to be in all things subject unto the
+man, and to this Your servant to be at the head of the woman that they
+live according to Your Will. Bless them. O Lord our God, as you blessed
+Abraham and Sarah. Bless them, O Lord our God, as You blessed Isaac and
+Rebecca. Bless them, O Lord our God, as you blessed Jacob and all the
+Prophets. Bless them, O Lord our God, as You blessed Joseph and Asenath.
+Bless them O Lord our God, as You blessed Moses and Zipporah. Bless
+them, O Lord our God, as You blessed Joakim and Anna. Bless them, O Lord
+our God, as You blessed Zacharias and Elizabeth. Preserve them, O Lord
+our God, as You preserved Noah in the Ark. Preserve them, O Lord our
+God, as You preserved Jonah in the jaw of the sea beast. Preserve them,
+O Lord our God, as You preserved the holy Three Children from the fire,
+when You sent down upon them the dew of the Heavens. And may that joy
+come upon them which the blessed Helen had when she found the Precious
+Cross. Remember them, O Lord our God, as You remembered Enoch, Shem, and
+Elias. Remember them, O Lord our God, as You remembered Your holy Forty
+Martyrs, sending down upon them the crowns from the Heavens. Remember
+them, O Lord our God, and the parents who have reared them, for the
+prayers of parents confirm the foundation of houses. Remember, O Lord
+our God, the wedding company that here have come together, to be present
+at this rejoicing. Remember, O Lord our God, Your servant (Groom) and
+Your servant (Bride), and bless them. Give to them fruit of the womb,
+fair children, concord of soul and body. Exalt them as the cedars of
+Lebanon, and as well-cultured vine; bestow on them a rich store of
+sustenance, so that having a sufficiency of all things for themselves,
+they may abound in every good work that is good and acceptable before
+You. Let them behold their children's children as newly planted olive
+trees round about their table; and, being accepted before You, let them
+shine as stars in the Heavens, in You, our Lord, to Whom are due all
+Glory, honor, and worship as to Your eternal Father, and Your All-Holy,
+Good, and Life-creating Spirit, both now and ever, and to the ages of
+ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} Holy God, Who fashioned man from the dust, and from his
+rib fashioned woman, and joined her to him as a helpmate for him, for it
+was seemly unto Your Majesty for man not to be alone upon the earth, do
+You Yourself, O Sovereign Lord, stretch forth Your hand from Your holy
+dwelling place, and join together this Your servant (Groom) and Your
+servant (Bride), for by You is a wife joined to her husband. Join them
+together in oneness of mind; crown them with wedlock into one flesh;
+grant to them the fruit of the womb, and the gain of well favored
+children. For Yours is the dominion, and Yours is the Kingdom, and the
+Power, and the Glory: of the Father, and of the Son, and of the Holy
+Spirit, both now and ever, and to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} The servant of God (Groom) is crowned for the servant
+of God, (Bride), in the Name of the Father, and of the Son, and of the
+Holy Spirit. (3)
+
+\textbf{PEOPLE:} \Amen (3)
+
+\textbf{PRIEST:} The servant of God (Bride) is crowned for the servant
+of God, (Groom), in the Name of the Father, and of the Son, and of the
+Holy Spirit. (3)
+
+\textbf{PEOPLE:} \Amen (3)
+
+\textbf{PEOPLE:} \textit{(Sing the following twice.)} \\
+\CrowningHymn
+
+\textit{(Then sing the following for the third/last time.)}
+
+\CrowningHymnThird
+
+\textbf{PRIEST:} Let us be attentive.
+
+\textbf{READER:} You placed a crown of precious stones on their heads.
+They asked You for life, and You gave it to them, length of days.
+
+\textbf{PRIEST:} Wisdom.
+
+\textbf{READER:} The reading is from Saint Paul's Letter to the
+Ephesians.
+
+\textbf{PRIEST:} Let us be attentive.
+
+\textbf{READER:} Brethren, always for everything give thanks in the name
+of our Lord Jesus Christ to God the Father. Be subject to one another
+out of reverence for Christ. Wives, be subject to your husbands, as to
+the Lord. For the husband is the head of the wife as Christ is the head
+of the church, his body, and is himself its Savior. As the church is
+subject to Christ, so let wives be also subject in everything to their
+husbands. Husbands, love your wives, as Christ loved the church and gave
+himself up for her, that he might sanctify her, having cleansed her by
+the washing of water with the word, that he might present the church to
+himself in splendor, without spot or wrinkle or any such thing, that she
+might be holy and without blemish. Even so husbands should love their
+wives as their own bodies. He who loves his wife loves himself For no
+man ever hates his own flesh, but nourishes and cherishes it, as Christ
+does the church, because we are members of his body. "For this reason a
+man shall leave his father and his mother and shall be joined to his
+wife, and the two shall become one." This is a great mystery, and I take
+it to mean Christ and the church; however, let each one of you love his
+wife as himself, and let the wife see that she respects her husband.
+
+\textbf{PRIEST:} Peace be with you.
+
+\textbf{PEOPLE:} \\
+\AWYSGospelAlleluia
+
+\textbf{PRIEST:} Wisdom. Arise. Let us hear the Holy Gospel. Peace be
+with you all.
+
+\textbf{PEOPLE:} \AWYSGospel
+
+\textbf{PRIEST:} The reading is from the Holy Gospel according to Saint
+John.
+
+\textbf{PEOPLE:} \GloryBeforeGospel
+
+\textbf{PRIEST:} Let us be attentive. At that time there was a marriage
+at Cana in Galilee, and the mother of Jesus was there; Jesus also was
+invited to the marriage, with his disciples. When the wine failed, the
+mother of Jesus said to him, "They have no wine." And Jesus said to her,
+"O woman, what have you to do with me? My hour has not yet come." His
+mother said to the servants, "Do whatever he tells you." Now six stone
+jars were standing there, for the Jewish rites of purification, each
+holding twenty or thirty gallons. Jesus said to them, "Fill the jars
+with water." And they filled them up to the brim. He said to them, "Now
+draw some out, and take it to the steward of the feast." So they took
+it. When the steward of the feast tasted the water now become wine, and
+did not know where it came from (though the servants who had drawn the
+water knew), the steward of the feast called the bridegroom and said to
+him, "Every man serves the good wine first; and when men have drunk
+freely, then the poor wine; but you have kept the good wine until now."
+This, the first of his signs, Jesus did at Cana in Galilee, and
+manifested his glory; and his disciples believed in him.
+
+\textbf{PEOPLE:} \GloryAfterGospel
+
+\textbf{PRIEST:} Have mercy on us, O God, according to Your great mercy,
+we pray You, hear us and have mercy.
+
+\textbf{PEOPLE:} \\
+\LHMthreefold
+
+\textbf{PRIEST:} Again let us pray for the servants of God, (Groom) and
+(Bride), that they may have mercy, life, health, peace, safety,
+salvation, pardon and remission of their sins.
+
+\textbf{PEOPLE:} \\
+\LHMthreefold
+
+\textbf{PRIEST:} For You are a merciful God Who loves mankind, and to
+You we offer up glory, to the Father and to the Son and to the Holy
+Spirit, now and forever and to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} O Lord our God, Who in Your saving Providence did
+promise in Cana of Galilee to declare marriage honorable by Your
+presence, do You Yourself preserve in peace and oneness of mind these
+Your servants (Groom) and (Bride), whom You are well pleased should be
+joined to one another. Declare their marriage honorable. Preserve their
+bed undefiled. Grant that their life together be with be without spot of
+sin. And assure that they may be worthy to attain unto a ripe old age,
+keeping Your commandments in a pure heart. For You are our God, the God
+to have mercy and save, and to You do we send up all Glory, as to Your
+Eternal Father, and Your All-Holy, Good, and Life-creating Spirit, both
+now and ever, and to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Help us, save us, have mercy on us, and protect us, O
+God, by Your grace.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} That the whole day may be perfect, holy, peaceful, and
+sinless, let us ask the Lord.
+
+\textbf{PEOPLE:} \GTOLone
+
+\textbf{PRIEST:} For an angel of peace, a faithful guide, a guardian of
+our souls and bodies, let us ask the Lord.
+
+\textbf{PEOPLE:} \GTOLtwo
+
+\clearpage
+\textbf{PRIEST:} For pardon and remission of our sins and
+transgressions, let us ask the Lord.
+
+\textbf{PEOPLE:} \GTOLthree
+
+\textbf{PRIEST:} For that which is good and beneficial for our souls,
+and for peace for the world, let us ask the Lord.
+
+\textbf{PEOPLE:} \GTOLone
+
+\textbf{PRIEST:} That we may complete the remaining time of our life in
+peace and repentance, let us ask the Lord.
+
+\textbf{PEOPLE:} \GTOLtwo
+
+\textbf{PRIEST:} And let us ask for a Christian end to our life,
+peaceful, without shame and suffering, and for a good defense before the
+awesome judgment seat of Christ.
+
+\textbf{PEOPLE:} \GTOLthree
+
+\clearpage
+\textbf{PRIEST:} Having asked for the unity of the faith and for the
+communion of the Holy Spirit, let us commend ourselves and one another
+and our whole life to Christ our God.
+
+\textbf{PEOPLE:} \TYOL
+
+\textbf{PRIEST:} And grant us, Master, with boldness and without
+condemnation, to dare call You, the heavenly God, Father, and to say:
+
+\textbf{PEOPLE:} Our Father, who art in heaven, hallowed be Thy name.
+Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us
+this day our daily bread; and forgive us our trespasses, as we forgive
+those who trespass against us. And lead us not into temptation, but
+deliver us from evil.
+
+\textbf{PRIEST:} For Thine is the Kingdom and the power and the glory,
+of the Father and of the Son and of the Holy Spirit, now and forever and
+to the ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Peace be with all.
+
+\textbf{PEOPLE:} \AWYS
+
+\clearpage
+\textbf{PRIEST:} Let us bow our heads to the Lord.
+
+\textbf{PEOPLE:} \TYOL
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} O God, Who by Your might create all things, and confirm
+the universe, and adorn the crown of all things created by You, do You,
+with Your spiritual blessing, bless also this common cup given to them
+that are joined in the community of marriage. For blessed is Your Holy
+Name, and glorified is the Kingdom of the Father, and of the Son, and of
+the Holy Spirit, both now and ever, and to the ages of ages.
+
+\textbf{PEOPLE:} \\
+\TakeUpTheCup
+
+\OIsaiah
+
+\OHolyMartyrSaints
+
+\GloryBeToYou
+
+\textbf{PRIEST:} Be magnified, O Bridegroom, as Abraham, and blessed as
+Isaac, and increased as was Jacob. Go your way in peace, performing in
+righteousness the commandments of God.
+
+\textbf{PRIEST:} And you, O Bride, be magnified as was Sarah, and
+rejoiced as was Rebecca, and increased as Rachel, being glad in your
+husband, keeping the paths of the Law, for so God is well pleased.
+
+\textbf{PRIEST:} Let us pray to the Lord.
+
+\textbf{PEOPLE:} \LHMone
+
+\textbf{PRIEST:} O God our God, Who was present in Cana of Galilee and
+blessed the marriage there, do You also bless these' Your servants, who,
+by Your Providence, are joined in the community of marriage. Bless their
+comings-in and their goings-out. Replenish their life with all good
+things. (Here the priest lifts the crowns from the heads of the bride
+and groom and places them on the table.) Accept their crowns in Your
+Kingdom unsoiled and undefiled; and preserve them without offense to the
+ages of ages.
+
+\textbf{PEOPLE:} \Amen
+
+\textbf{PRIEST:} Peace be with you all.
+
+\textbf{PEOPLE:} \AWYS
+
+\textbf{PRIEST:} Let us bow our heads to the Lord.
+
+\textbf{PEOPLE:} \TYOL
+
+\textbf{PRIEST:} The Father, the Son, and the Holy Spirit; the All-Holy,
+Consubstantial and Life-creating Trinity; One Godhead and Kingdom; bless
+you; grant to you long life, well-favored children, progress in life and
+in Faith; replenish you with all the good things of the earth, and count
+you worthy of the promised blessings, through the intercessions of the
+holy Theotokos, and of all the Saints.
+
+\textbf{PEOPLE:} \Amen
+
+\begin{center}\textbf{\textsc{Dismissal}}\end{center}
+
+\textbf{PRIEST:} Glory to You, our God. Glory to You. May He, who by His
+presence in Cana of Galilee declared marriage to be honorable, Christ
+our true God, through the intercessions of His all-pure Mother, of the
+holy, glorious, and all-praiseworthy Apostles, of the holy, God-crowned
+and Equal-to-the-Apostles Constantine and Helen, of the Holy, great
+Martyr Procopios, and of all the holy Saints, have mercy on us and save
+us, as our good and loving Lord.
+
+\textbf{PEOPLE:} \Amen
+
+\clearpage
+\textbf{PRIEST:} Through the prayers of our holy fathers, Lord Jesus
+Christ, our God, have mercy on us and save us.
+
+\textbf{PEOPLE:} \Amen
+
+
+\end{document}

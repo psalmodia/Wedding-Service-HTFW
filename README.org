@@ -1,0 +1,15 @@
+** HOWTO Configure Your System
+
+On your system, install the following software dependencies.
+
+- "All the LaTeX things!", i.e. a complete TeX distro, like TeX Live.
+- lilypond
+- bmake (BSD make) 
+
+** HOWTO Build The Booklet
+
+At a POSIX shell prompt, type:
+
+#+begin_src 
+bmake Wedding-Service-with-music.pdf
+#+end_src
