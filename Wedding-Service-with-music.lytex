@@ -186,6 +186,31 @@
 }\addlyrics{And with your spi -- rit.}
 \end{lilypond}}
 
+\newcommand{\AlleluiaThreefold}{\begin[staffsize=25]{lilypond}
+\layout {
+  indent = #0
+  %line-width = #120
+  ragged-last = ##t
+}
+%\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  c4 d |
+  \time 4/4
+  e4 e e2 |
+  \time 2/4
+  d4 e |
+  \time 4/4
+  f4 f f2 |
+  \time 2/4
+  e4 f |
+  \time 4/4
+  g2 f2 | e1
+}\addlyrics{Al -- le -- lu -- i -- a. Al -- le -- lu -- i -- a. Al -- le -- lu -- i -- a.}
+\end{lilypond}}
+
 \newcommand{\GloryBeforeGospel}{\begin[staffsize=25]{lilypond}
 \layout {
   indent = #0
@@ -602,6 +627,7 @@ the Lord.
 
 \textbf{PEOPLE:} \LHMtwo
 
+\clearpage
 \textbf{PRIEST:} That they may rejoice in the beholding of sons and
 daughters; let us pray to the Lord.
 
@@ -751,6 +777,7 @@ Spirit, both now and ever, and to the ages of ages.
 
 \textbf{PEOPLE:} \Amen
 
+\clearpage
 \textbf{PRIEST:} The servant of God (Groom) is crowned for the servant
 of God, (Bride), in the Name of the Father, and of the Son, and of the
 Holy Spirit. (3)
@@ -770,6 +797,7 @@ Holy Spirit. (3)
 
 \CrowningHymnThird
 
+%\clearpage
 \textbf{PRIEST:} Let us be attentive.
 
 \textbf{READER:} You placed a crown of precious stones on their heads.
@@ -801,17 +829,15 @@ wife, and the two shall become one." This is a great mystery, and I take
 it to mean Christ and the church; however, let each one of you love his
 wife as himself, and let the wife see that she respects her husband.
 
-\textbf{PRIEST:} Peace be with you.
-
-\textbf{PEOPLE:} \\
-\AWYSGospelAlleluia
+\textbf{PRIEST:} Peace be with you.\\
+\textbf{PEOPLE:} \AWYS \\
+\AlleluiaThreefold
 
 \textbf{PRIEST:} Wisdom. Arise. Let us hear the Holy Gospel. Peace be
 with you all.
 
 \textbf{PEOPLE:} \AWYSGospel
 
-\clearpage
 \textbf{PRIEST:} The reading is from the Holy Gospel according to Saint
 John.
 
@@ -837,19 +863,16 @@ manifested his glory; and his disciples believed in him.
 
 \textbf{PEOPLE:} \GloryAfterGospel
 
-\clearpage
 \textbf{PRIEST:} Have mercy on us, O God, according to Your great mercy,
 we pray You, hear us and have mercy.
 
-\textbf{PEOPLE:} \\
-\LHMthreefold
+\textbf{PEOPLE:} \LHMthreefold
 
 \textbf{PRIEST:} Again let us pray for the servants of God, (Groom) and
 (Bride), that they may have mercy, life, health, peace, safety,
 salvation, pardon and remission of their sins.
 
-\textbf{PEOPLE:} \\
-\LHMthreefold
+\textbf{PEOPLE:} \LHMthreefold
 
 \textbf{PRIEST:} For You are a merciful God Who loves mankind, and to
 You we offer up glory, to the Father and to the Son and to the Holy
@@ -857,8 +880,8 @@ Spirit, now and forever and to the ages of ages.
 
 \textbf{PEOPLE:} \Amen
 
-\textbf{PRIEST:} Let us pray to the Lord.
-
+\clearpage
+\textbf{PRIEST:} Let us pray to the Lord. \\[0em]
 \textbf{PEOPLE:} \LHMone
 
 \textbf{PRIEST:} O Lord our God, Who in Your saving Providence did
@@ -871,18 +894,15 @@ sin. And assure that they may be worthy to attain unto a ripe old age,
 keeping Your commandments in a pure heart. For You are our God, the God
 to have mercy and save, and to You do we send up all Glory, as to Your
 Eternal Father, and Your All-Holy, Good, and Life-creating Spirit, both
-now and ever, and to the ages of ages.
-
+now and ever, and to the ages of ages. \\[-0.5em]
 \textbf{PEOPLE:} \Amen
 
 \textbf{PRIEST:} Help us, save us, have mercy on us, and protect us, O
-God, by Your grace.
-
+God, by Your grace. \\[0em]
 \textbf{PEOPLE:} \LHMone
 
 \textbf{PRIEST:} That the whole day may be perfect, holy, peaceful, and
-sinless, let us ask the Lord.
-
+sinless, let us ask the Lord.\\[0em]
 \textbf{PEOPLE:} \GTOLone
 
 \textbf{PRIEST:} For an angel of peace, a faithful guide, a guardian of
@@ -890,7 +910,6 @@ our souls and bodies, let us ask the Lord.
 
 \textbf{PEOPLE:} \GTOLtwo
 
-\clearpage
 \textbf{PRIEST:} For pardon and remission of our sins and
 transgressions, let us ask the Lord.
 
@@ -912,7 +931,6 @@ awesome judgment seat of Christ.
 
 \textbf{PEOPLE:} \GTOLthree
 
-\clearpage
 \textbf{PRIEST:} Having asked for the unity of the faith and for the
 communion of the Holy Spirit, let us commend ourselves and one another
 and our whole life to Christ our God.
@@ -930,15 +948,12 @@ deliver us from evil.
 
 \textbf{PRIEST:} For Thine is the Kingdom and the power and the glory,
 of the Father and of the Son and of the Holy Spirit, now and forever and
-to the ages of ages.
-
+to the ages of ages. \\[0em]
 \textbf{PEOPLE:} \Amen
 
-\textbf{PRIEST:} Peace be with all.
-
+\textbf{PRIEST:} Peace be with all. \\[0em]
 \textbf{PEOPLE:} \AWYS
 
-\clearpage
 \textbf{PRIEST:} Let us bow our heads to the Lord.
 
 \textbf{PEOPLE:} \TYOL
@@ -956,7 +971,7 @@ the Holy Spirit, both now and ever, and to the ages of ages.
 
 \textbf{PEOPLE:} \\
 \TakeUpTheCup
-
+\clearpage
 \OIsaiah
 
 \OHolyMartyrSaints
